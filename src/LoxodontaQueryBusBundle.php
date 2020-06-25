@@ -2,7 +2,9 @@
 
 namespace Loxodonta\QueryBusBundle;
 
+use Loxodonta\QueryBusBundle\DependencyInjection\Compiler\QueryBusPass;
 use Loxodonta\QueryBusBundle\DependencyInjection\LoxodontaQueryBusExtension;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
@@ -10,6 +12,11 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class LoxodontaQueryBusBundle extends Bundle
 {
+    public function build(ContainerBuilder $container)
+    {
+        $container->addCompilerPass(new QueryBusPass());
+    }
+    
     public function getContainerExtension()
     {
         if (null === $this->extension) {
