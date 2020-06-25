@@ -1,0 +1,21 @@
+{
+    "name": "loxodonta/query-bus-bundle",
+    "description": "Symfony bundle for loxodonta/query-bus",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas Canfrere",
+            "email": "nicolas.canfrere@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Loxodonta\\QueryBusBundle\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "loxodonta/query-bus": "^0.1.0"
+    }
+}
